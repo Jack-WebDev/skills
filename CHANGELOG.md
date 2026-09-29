@@ -1,5 +1,11 @@
 # jack-skills
 
+## 0.3.0
+
+### Minor Changes
+
+- [`2febcc6`](https://github.com/Jack-WebDev/skills/commit/2febcc63caf0d397415df41405e1b8bc3247776a) Thanks [@Jack-WebDev](https://github.com/Jack-WebDev)! - Add Claude Code plugin packaging for the reusable engineering skills.
+
 ## 0.2.0
 
 ### Minor Changes
