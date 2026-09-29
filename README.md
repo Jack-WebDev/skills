@@ -12,6 +12,19 @@ npx skills@latest add Jack-WebDev/skills
 
 No runtime package or custom installer is added to your application.
 
+## Claude Code plugin
+
+The repository root is also a Claude Code plugin. Clone it, validate it, and load it for a development session:
+
+```bash
+git clone https://github.com/Jack-WebDev/skills.git
+cd skills
+claude plugin validate . --strict
+claude --plugin-dir .
+```
+
+The skills are available as `/skills:code-engineering`, `/skills:typescript-best-practices`, and `/skills:react-best-practices`.
+
 ## Available skills
 
 | Skill | Purpose |

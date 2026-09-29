@@ -1,0 +1,19 @@
+{
+  "name": "skills",
+  "displayName": "Jack's Engineering Skills",
+  "version": "0.2.0",
+  "description": "Reusable software-engineering standards for production code, TypeScript, and React.",
+  "author": {
+    "name": "Jack-WebDev",
+    "url": "https://github.com/Jack-WebDev"
+  },
+  "homepage": "https://github.com/Jack-WebDev/skills#readme",
+  "repository": "https://github.com/Jack-WebDev/skills",
+  "license": "MIT",
+  "keywords": [
+    "software-engineering",
+    "typescript",
+    "react",
+    "code-quality"
+  ]
+}
