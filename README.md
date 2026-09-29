@@ -78,6 +78,28 @@ Validate every skill's frontmatter, name, description, and directory consistency
 pnpm validate
 ```
 
+## Releases
+
+Record a user-facing change before merging it:
+
+```bash
+pnpm changeset
+```
+
+Set `GITHUB_TOKEN` in the environment, then apply pending changesets to the repository version and changelog:
+
+```bash
+pnpm run version
+```
+
+After committing the version changes, create the release tag:
+
+```bash
+pnpm run release
+```
+
+The package is private and is not published to npm. Changesets manages the repository version, changelog, and Git tags.
+
 ## Philosophy
 
 - Skills are portable `SKILL.md` files with one clear responsibility.
@@ -86,3 +108,7 @@ pnpm validate
 - Installed language, framework, and tool versions take precedence over newer conventions.
 - Agents should make the smallest coherent change that fully solves the task.
 - Consuming projects do not need a runtime dependency from this repository.
+
+## License
+
+[MIT](LICENSE)
