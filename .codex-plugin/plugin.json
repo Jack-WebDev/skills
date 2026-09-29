@@ -1,0 +1,33 @@
+{
+  "name": "skills",
+  "version": "0.1.0",
+  "description": "Reusable software-engineering standards for production code, TypeScript, and React.",
+  "author": {
+    "name": "Jack-WebDev",
+    "url": "https://github.com/Jack-WebDev"
+  },
+  "homepage": "https://github.com/Jack-WebDev/skills#readme",
+  "repository": "https://github.com/Jack-WebDev/skills",
+  "license": "MIT",
+  "keywords": [
+    "software-engineering",
+    "typescript",
+    "react",
+    "code-quality"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Jack's Engineering Skills",
+    "shortDescription": "Production engineering standards for Codex.",
+    "longDescription": "Apply maintainable software-engineering practices with version-aware guidance for TypeScript and React codebases.",
+    "developerName": "Jack-WebDev",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Code generation",
+      "Code review",
+      "Refactoring"
+    ],
+    "websiteURL": "https://github.com/Jack-WebDev/skills",
+    "defaultPrompt": "Review this code using my engineering standards."
+  }
+}

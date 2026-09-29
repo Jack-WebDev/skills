@@ -9,10 +9,11 @@
   },
   "license": "MIT",
   "scripts": {
-    "validate": "node scripts/validate-skills.mjs",
+    "validate": "node scripts/validate-skills.mjs && node scripts/sync-plugin-version.mjs --check",
     "changeset": "changeset",
     "release": "changeset publish",
-    "version": "changeset version"
+    "version": "changeset version && node scripts/sync-plugin-version.mjs",
+    "check-plugin-version": "node scripts/sync-plugin-version.mjs --check"
   },
   "devDependencies": {
     "@changesets/changelog-github": "^1.0.1",
