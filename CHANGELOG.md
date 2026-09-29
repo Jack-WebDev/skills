@@ -1,5 +1,11 @@
 # jack-skills
 
+## 0.2.0
+
+### Minor Changes
+
+- [`11318be`](https://github.com/Jack-WebDev/skills/commit/11318be43bdb219f2a1e9bead2e4ca1c80e5395b) Thanks [@Jack-WebDev](https://github.com/Jack-WebDev)! - Add Codex plugin packaging for the reusable engineering skills.
+
 ## 0.1.0
 
 ### Minor Changes
