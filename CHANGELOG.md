@@ -1,5 +1,12 @@
 # jack-skills
 
+## 0.4.0
+
+### Minor Changes
+
+- [`fb316e1`](https://github.com/Jack-WebDev/skills/commit/fb316e13b227000513d27fc0d7af94ad5dc1533c) Thanks [@Jack-WebDev](https://github.com/Jack-WebDev)! - Add skills for branch naming, creating a single commit message, explaining
+  technical concepts in plain language, and idiomatic Go engineering.
+
 ## 0.3.0
 
 ### Minor Changes
