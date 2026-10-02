@@ -1,20 +1,67 @@
-# Jack's Agent Skills
+# Jack's Engineering Skills
 
-A collection of reusable software-engineering skills for coding agents. Each skill is plain Markdown and can be installed independently with the existing [`skills`](https://skills.sh/) CLI.
+Practical, reusable instructions for coding agents. Each skill is a portable
+`SKILL.md` file that helps an agent make focused, maintainable changes without
+adding a runtime dependency to your project.
 
-## Installation
+## Quick start
 
-Run the following command and choose the skills and target agents interactively:
+Install interactively and choose the skills and agent you want to use:
 
 ```bash
 npx skills@latest add Jack-WebDev/skills
 ```
 
-No runtime package or custom installer is added to your application.
+Or install a specific skill directly:
+
+```bash
+npx skills@latest add Jack-WebDev/skills --skill code-engineering
+```
+
+## Included skills
+
+| Skill | Use it for |
+| --- | --- |
+| [`branch-name`](skills/branch-name/SKILL.md) | Creating one concise Git branch name from planned or completed work. |
+| [`code-engineering`](skills/code-engineering/SKILL.md) | Making production code changes that are focused, safe, and maintainable. |
+| [`golang-best-practices`](skills/golang-best-practices/SKILL.md) | Writing, reviewing, and refactoring idiomatic Go. |
+| [`layman-it`](skills/layman-it/SKILL.md) | Explaining technical work in plain, approachable language. |
+| [`react-best-practices`](skills/react-best-practices/SKILL.md) | Building and reviewing accessible React code that fits the installed stack. |
+| [`single-commit-message`](skills/single-commit-message/SKILL.md) | Generating one clear commit message for the actual changes. |
+| [`typescript-best-practices`](skills/typescript-best-practices/SKILL.md) | Writing and reviewing clear, version-aware TypeScript. |
+
+The language and framework skills complement `code-engineering`; install them
+together when they match your project.
+
+## Installation options
+
+Preview the catalog without installing anything:
+
+```bash
+npx skills@latest add Jack-WebDev/skills --list
+```
+
+Install several skills at once:
+
+```bash
+npx skills@latest add Jack-WebDev/skills \
+  --skill code-engineering typescript-best-practices react-best-practices
+```
+
+Target a supported agent or install globally:
+
+```bash
+npx skills@latest add Jack-WebDev/skills --agent codex
+npx skills@latest add Jack-WebDev/skills --agent claude-code
+npx skills@latest add Jack-WebDev/skills --global
+```
+
+Add `-y` to skip confirmation prompts.
 
 ## Claude Code plugin
 
-The repository root is also a Claude Code plugin. Clone it, validate it, and load it for a development session:
+This repository can also be loaded directly as a Claude Code plugin for a
+development session:
 
 ```bash
 git clone https://github.com/Jack-WebDev/skills.git
@@ -23,104 +70,51 @@ claude plugin validate . --strict
 claude --plugin-dir .
 ```
 
-The skills are available as `/skills:code-engineering`, `/skills:typescript-best-practices`, and `/skills:react-best-practices`.
+The skills are then available with the `skills` plugin namespace, such as
+`/skills:code-engineering` and `/skills:react-best-practices`.
 
-## Available skills
+## Keeping skills current
 
-| Skill | Purpose |
-| --- | --- |
-| `code-engineering` | General standards for focused, maintainable production code. |
-| `typescript-best-practices` | Version-aware TypeScript guidance for safe contracts and understandable types. |
-| `react-best-practices` | Version-aware React guidance for components, state, effects, and accessibility. |
-
-The specialized TypeScript and React skills are designed to compose with `code-engineering`.
-
-## Choose what to install
-
-List the available skills without installing them:
-
-```bash
-npx skills@latest add Jack-WebDev/skills --list
-```
-
-Install one skill:
-
-```bash
-npx skills@latest add Jack-WebDev/skills --skill typescript-best-practices
-```
-
-Install several skills:
-
-```bash
-npx skills@latest add Jack-WebDev/skills \
-  --skill code-engineering typescript-best-practices react-best-practices
-```
-
-Add `-y` to skip confirmation prompts.
-
-## Choose an agent or scope
-
-Target a specific supported agent:
-
-```bash
-npx skills@latest add Jack-WebDev/skills --agent codex
-npx skills@latest add Jack-WebDev/skills --agent claude-code
-```
-
-Install globally instead of in the current project:
-
-```bash
-npx skills@latest add Jack-WebDev/skills --global
-```
-
-## Updates
-
-Update installed skills through the same CLI:
+Update all installed skills with:
 
 ```bash
 npx skills@latest update
 ```
 
-Use `npx skills@latest update <skill-name>` to update one skill, or add `--global` to update global installations.
+Use `npx skills@latest update <skill-name>` to update only one skill. Add
+`--global` if the skills were installed globally.
 
-## Repository validation
+## Contributing
 
-Validate every skill's frontmatter, name, description, and directory consistency:
+Skills live in [`skills/`](skills) and must include valid frontmatter. Before
+opening a pull request, run:
 
 ```bash
 pnpm validate
 ```
 
-## Releases
-
-Record a user-facing change before merging it:
+For user-facing changes, create a changeset:
 
 ```bash
 pnpm changeset
 ```
 
-Set `GITHUB_TOKEN` in the environment, then apply pending changesets to the repository version and changelog:
+Maintainers can apply pending changesets and create a Git tag with:
 
 ```bash
 pnpm run version
-```
-
-After committing the version changes, create the release tag:
-
-```bash
 pnpm run release
 ```
 
-The package is private and is not published to npm. Changesets manages the repository version, changelog, and Git tags.
+The package is private; it is not published to npm. Changesets manages the
+repository version, changelog, and Git tags.
 
-## Philosophy
+## Principles
 
-- Skills are portable `SKILL.md` files with one clear responsibility.
-- General and specialized guidance should compose without unnecessary duplication.
-- Existing project architecture and sound conventions should be respected.
-- Installed language, framework, and tool versions take precedence over newer conventions.
-- Agents should make the smallest coherent change that fully solves the task.
-- Consuming projects do not need a runtime dependency from this repository.
+- Keep changes small, deliberate, and easy to review.
+- Prefer clear, established practices over clever abstractions.
+- Respect the existing project architecture and installed tool versions.
+- Make important contracts and failure cases explicit.
 
 ## License
 
