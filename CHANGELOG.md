@@ -1,5 +1,11 @@
 # jack-skills
 
+## 0.5.0
+
+### Minor Changes
+
+- [`642e1a1`](https://github.com/Jack-WebDev/skills/commit/642e1a1c8049a6cf30b8e6699917d8726bb7ddf7) Thanks [@Jack-WebDev](https://github.com/Jack-WebDev)! - Add skills for Vitest testing and TanStack Query and Router development.
+
 ## 0.4.0
 
 ### Minor Changes
