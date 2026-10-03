@@ -28,7 +28,10 @@ npx skills@latest add Jack-WebDev/skills --skill code-engineering
 | [`layman-it`](skills/layman-it/SKILL.md) | Explaining technical work in plain, approachable language. |
 | [`react-best-practices`](skills/react-best-practices/SKILL.md) | Building and reviewing accessible React code that fits the installed stack. |
 | [`single-commit-message`](skills/single-commit-message/SKILL.md) | Generating one clear commit message for the actual changes. |
+| [`tanstack-query-best-practices`](skills/tanstack-query-best-practices/SKILL.md) | Building and reviewing robust TanStack Query data-fetching and server-state code. |
+| [`tanstack-router-best-practices`](skills/tanstack-router-best-practices/SKILL.md) | Building and reviewing type-safe TanStack Router navigation and route state. |
 | [`typescript-best-practices`](skills/typescript-best-practices/SKILL.md) | Writing and reviewing clear, version-aware TypeScript. |
+| [`vitest-best-practices`](skills/vitest-best-practices/SKILL.md) | Writing and reviewing reliable, behavior-focused Vitest tests. |
 
 The language and framework skills complement `code-engineering`; install them
 together when they match your project.
